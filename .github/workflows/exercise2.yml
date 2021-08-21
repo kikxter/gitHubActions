@@ -5,17 +5,21 @@ jobs:
   job1:
     name: Job 1
     runs-on: ubuntu-latest
-    run: date
+    steps:
+      - run: date
   job2:
     name: Job 2
     runs-on: windows-latest
-    run: Get-Date
+    steps:
+      - run: Get-Date
   job3:
     name: Job 3
     runs-on: macos-latest
-    run: date
+    steps:
+      - run: date
   job4:
     name: Job4 Depends on 1,2,3
     runs-on: macos-latest
     needs: [job1, job2, job3]
-    run: date
+    steps:
+      - run: date
