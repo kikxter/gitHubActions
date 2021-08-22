@@ -12,6 +12,6 @@ jobs:
     - name: Upload Artifact
       uses: actions/upload-artifact@v1.0.0
       with:
-        name: $newArtifact # or ${{ env.ARTIFACT_NAME }} -- Only restriction is to not use it with this YAML notation if env var was declared on same step
-        path: ./$newArtifact
+        name: ${{env.ARTIFACT_NAME}} # or ${{ env.ARTIFACT_NAME }} -- Only restriction is to not use it with this YAML notation if env var was declared on same step
+        path: ./${{env.newArtifact}}
         
